@@ -302,6 +302,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5755410409011349710, guid: c3aa391afbbdc0d488ecb61bf53e385e, type: 3}
+      propertyPath: attractionTemplate
+      value: 
+      objectReference: {fileID: 11400000, guid: 5377b17618630f643a1473095cad8769, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3aa391afbbdc0d488ecb61bf53e385e, type: 3}
 --- !u!1 &573935811
@@ -692,6 +696,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5755410409011349710, guid: c3aa391afbbdc0d488ecb61bf53e385e, type: 3}
+      propertyPath: attractionTemplate
+      value: 
+      objectReference: {fileID: 11400000, guid: 5377b17618630f643a1473095cad8769, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3aa391afbbdc0d488ecb61bf53e385e, type: 3}
 --- !u!1 &1534870286
@@ -742,7 +750,7 @@ MonoBehaviour:
   spawnZone: {fileID: 387852014}
   secondDelay: 1
   attendentTemplate: {fileID: 5248723025852924253, guid: 85e36e0ea60543049b6132f2027f1f66, type: 3}
-  attendentMax: 100
+  attendentMax: 30
   Attractions: []
   Activities: []
 --- !u!1 &1554422098

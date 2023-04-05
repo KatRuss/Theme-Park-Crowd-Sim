@@ -6,7 +6,7 @@ public class Attraction : Event
     [Header("Attraction Attributes")]
     public int attendentsPerRide;
     public int lineCapaticy;
-    public float rideLength;
+    public int rideLength;
 
     [Header("Express Attributes")]
     public bool usesExpressSystem;

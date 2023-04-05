@@ -16,9 +16,9 @@ MonoBehaviour:
   maxCapacity: 0
   price: 0
   popularityMod: 0
-  attendentsPerRide: 0
+  attendentsPerRide: 1
   lineCapaticy: 0
-  rideLength: 0
+  rideLength: 2
   usesExpressSystem: 0
   expressMinutes: 0
   rideLengthDeviation: 0

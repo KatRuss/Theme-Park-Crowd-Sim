@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TemplateName: TestPerson
   namebank: {fileID: 0}
-  AttractionToActivityPref: 0.747
+  AttractionToActivityPref: 0
   bulkMinutesMax: 500
   bulkMinutesGeneral: 120
   ExpressTicketWillingness: 0.62

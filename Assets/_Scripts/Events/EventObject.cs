@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EventObject : MonoBehaviour
-{
-    public Event eventTemplate;
-    
-    public Transform queueStart;
-    public float queueGapSize;
-    public Queue<Attendent> attendentsInQueue = new Queue<Attendent>();
+{   
+    [SerializeField] Transform exitPoint;
+    [SerializeField] Transform queueStart;
+    [SerializeField] float queueGapSize;
+    public Queue<AttendentNavigator> attendentsInQueue = new Queue<AttendentNavigator>();
     List<Transform> queuePositions = new List<Transform>();
     Vector3 queueEndPosition;
 
@@ -17,8 +16,8 @@ public class EventObject : MonoBehaviour
         queuePositions.Add(queueStart);
     }
 
-    public Vector3 getNextQueuePosition(){
-
+    public Vector3 enterIntoQueue()
+    {
         Vector3 queuePosition = Vector3.zero;
         //If queue is currently full, add a new queue point
         if (attendentsInQueue.Count >= queuePositions.Count)
@@ -36,11 +35,23 @@ public class EventObject : MonoBehaviour
             }
         }
 
-
         return queuePosition;
     }
 
-    public Transform SpawnNewQueuePoint(){
+    public Vector3 getPositionInQueue(int index)
+    {
+        return queuePositions[index].position;
+    }
+
+    public Vector3 getAttractionPosition(){
+        return transform.position;
+    }
+
+    public Vector3 getExitPoint(){
+        return exitPoint.position;
+    }
+
+    Transform SpawnNewQueuePoint(){
         GameObject newPoint = new GameObject("Queue Position" + queuePositions.Count);
         queuePositions.Add(newPoint.transform);
         newPoint.transform.parent = this.gameObject.transform;
