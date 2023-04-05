@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7990b7b30605fa48aa2152144650c56, type: 3}
+  m_Name: New Attendent Template
+  m_EditorClassIdentifier: 
+  TemplateName: TestPerson
+  namebank: {fileID: 0}
+  AttractionToActivityPref: 0.747
+  bulkMinutesMax: 500
+  bulkMinutesGeneral: 120
+  ExpressTicketWillingness: 0.62
+  budget: 300
+  desiredMinutesSpent: 640
+  AttractionToActivityDeviator: 0
+  bulkMinutesMaxDeviator: 0.01
+  bulkMinutesGeneralDeviator: 0.05
+  budgetDeviator: 0.3
+  desiredTimeSpentDeviator: 0.3
+  expressTicketWillingDeviator: 0.05
