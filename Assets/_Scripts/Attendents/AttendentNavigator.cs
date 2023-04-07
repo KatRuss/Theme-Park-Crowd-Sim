@@ -15,6 +15,8 @@ public class AttendentNavigator : MonoBehaviour
     public int positionInQueue = -1;
     public bool isInsideEvent = false;
 
+    int queueUpdateTime = 1;
+
     EventObject currentEvent;
 
     // Start is called before the first frame update
@@ -50,6 +52,7 @@ public class AttendentNavigator : MonoBehaviour
                 isInQueue = false;
                 isInsideEvent = true;
                 newPosition = currentEvent.getAttractionPosition();
+                currentEvent.attendentsInRide++;
                 StartCoroutine("enjoyRide");
             }
             else
@@ -60,7 +63,9 @@ public class AttendentNavigator : MonoBehaviour
         else if (isInsideEvent) // If inside event and called, should leave event
         {
             StopCoroutine("enjoyRide");
+
             newPosition = currentEvent.getExitPoint();
+            currentEvent.attendentsInQueue.Remove(this);
             isInsideEvent = false;
         } 
 
@@ -119,18 +124,21 @@ public class AttendentNavigator : MonoBehaviour
     {
         while (isInQueue)
         {
-            //Move down the queue
-            Debug.Log("update");
-            positionInQueue -= currentEvent.attractionTemplate.attendentsPerRide;
-            setNewDestination();
-            yield return new WaitForSeconds(currentEvent.attractionTemplate.rideLength);
+            if (currentEvent.attendentsInRide < currentEvent.attractionTemplate.attendentsPerRide) //Try and make sure they don't cut eachother in line while waiting for the ride to be empty
+            {
+                //Move down the queue
+                Debug.Log("update");
+                positionInQueue -= currentEvent.attractionTemplate.attendentsPerRide;
+                setNewDestination();
+            }
+            yield return new WaitForSeconds(queueUpdateTime);
         }
     }
 
     IEnumerator enjoyRide()
     {
         yield return new WaitForSeconds(currentEvent.attractionTemplate.rideLength);
-        currentEvent.attendentsInQueue.Remove(this);
+        currentEvent.attendentsInRide--;
         setNewDestination();
     }
 }

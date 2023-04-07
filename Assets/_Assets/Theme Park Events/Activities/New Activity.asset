@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eddc7734112450148b17212c35392d0f, type: 3}
   m_Name: New Activity
   m_EditorClassIdentifier: 
-  name: 
-  maxCapacity: 0
-  price: 0
-  popularityMod: 0
-  priceDeviation: 0
+  name: Merch Store
+  maxCapacity: 50
+  price: 20
+  popularityMod: 10
+  priceDeviation: 50

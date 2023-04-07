@@ -9,6 +9,7 @@ public class EventObject : MonoBehaviour
     [SerializeField] Transform queueStart;
     [SerializeField] float queueGapSize;
     public List<AttendentNavigator> attendentsInQueue = new List<AttendentNavigator>();
+    public int attendentsInRide = 0;
     List<Transform> queuePositions = new List<Transform>();
     Vector3 queueEndPosition;
 

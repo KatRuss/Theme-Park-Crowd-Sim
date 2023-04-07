@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bean Men
   m_EditorClassIdentifier: 
   TemplateName: Little Bean Men
-  namebank: {fileID: 0}
+  namebank: {fileID: 11400000, guid: 6a2b47f2e65d79a46bf7d80cb07d8450, type: 2}
   AttractionToActivityPref: 0
   bulkMinutesMax: 500
   bulkMinutesGeneral: 120
