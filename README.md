@@ -31,5 +31,5 @@ Attractions, Events, and Attendant Templates use Scriptable Objects. Allowing de
 The main thing right now is: Making sure the attendents choose somewhere else to go when leaving an attraction.
 
 Other things to do:
-- Make sure that attendents have some awareness of their own needs, preferences, etc. (eat when they need to, leave when they run out of money or have used up their alloted time, 
-- 
+- Make sure that attendents have some awareness of their own needs, preferences, etc. (eat when they need to, leave when they run out of money or have used up their alloted time, etc.)
+
