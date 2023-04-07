@@ -4,16 +4,18 @@ using UnityEngine;
 
 public class EventObject : MonoBehaviour
 {   
+    public Attraction attractionTemplate;
     [SerializeField] Transform exitPoint;
     [SerializeField] Transform queueStart;
     [SerializeField] float queueGapSize;
-    public Queue<AttendentNavigator> attendentsInQueue = new Queue<AttendentNavigator>();
+    public List<AttendentNavigator> attendentsInQueue = new List<AttendentNavigator>();
     List<Transform> queuePositions = new List<Transform>();
     Vector3 queueEndPosition;
 
     void Awake(){
         queueEndPosition = queueStart.position;
         queuePositions.Add(queueStart);
+
     }
 
     public Vector3 enterIntoQueue()

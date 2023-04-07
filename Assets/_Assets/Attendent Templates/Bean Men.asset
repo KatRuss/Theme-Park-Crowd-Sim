@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f7990b7b30605fa48aa2152144650c56, type: 3}
-  m_Name: New Attendent Template
+  m_Name: Bean Men
   m_EditorClassIdentifier: 
-  TemplateName: TestPerson
+  TemplateName: Little Bean Men
   namebank: {fileID: 0}
   AttractionToActivityPref: 0
   bulkMinutesMax: 500

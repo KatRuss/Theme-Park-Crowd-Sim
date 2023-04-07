@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e551b6c0ace3324084e6773c05e9026, type: 3}
-  m_Name: New Attraction
+  m_Name: The Cube
   m_EditorClassIdentifier: 
-  name: 
-  maxCapacity: 0
-  price: 0
-  popularityMod: 0
+  name: THE CUBE
+  maxCapacity: 10
+  price: 15
+  popularityMod: 58
   attendentsPerRide: 1
-  lineCapaticy: 0
-  rideLength: 2
+  lineCapaticy: 100
+  rideLength: 5
   usesExpressSystem: 0
   expressMinutes: 0
   rideLengthDeviation: 0

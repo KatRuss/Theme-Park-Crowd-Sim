@@ -21,11 +21,11 @@ public class AttendentNavigator : MonoBehaviour
     void Start()
     {
         setNewDestination();
+        StartCoroutine("queueUpdate");
     }
     
     public void setNewDestination()
     {
-
         Vector3 newPosition = Vector3.zero;
 
         if (!isInQueue && !isInsideEvent) //If doing nothing, find something to do.
@@ -50,6 +50,7 @@ public class AttendentNavigator : MonoBehaviour
                 isInQueue = false;
                 isInsideEvent = true;
                 newPosition = currentEvent.getAttractionPosition();
+                StartCoroutine("enjoyRide");
             }
             else
             {
@@ -58,9 +59,9 @@ public class AttendentNavigator : MonoBehaviour
         } 
         else if (isInsideEvent) // If inside event and called, should leave event
         {
-
-
-            //isInsideEvent = false;
+            StopCoroutine("enjoyRide");
+            newPosition = currentEvent.getExitPoint();
+            isInsideEvent = false;
         } 
 
         if (newPosition != Vector3.zero)
@@ -68,10 +69,6 @@ public class AttendentNavigator : MonoBehaviour
             agent.SetDestination(newPosition);
         }
     }
-
-
-
-
 
     //False = Attraction, True = Activity
     bool decideEventType(float AttractionToActivityPref){
@@ -98,14 +95,6 @@ public class AttendentNavigator : MonoBehaviour
         }
     }
 
-
-
-    // Vector3 updateQueuePosition()
-    // {
-        
-    //     return ;
-    // }
-
     Vector3 enterIntoQueue(GameObject[] eventList)
     {
 
@@ -121,8 +110,27 @@ public class AttendentNavigator : MonoBehaviour
 
         //Get into the queue
         currentEvent = chosenEvent.GetComponent<EventObject>();
-        currentEvent.attendentsInQueue.Enqueue(this);
+        currentEvent.attendentsInQueue.Add(this);
         positionInQueue = currentEvent.attendentsInQueue.Count;
         return currentEvent.enterIntoQueue();
+    }
+
+    IEnumerator queueUpdate()
+    {
+        while (isInQueue)
+        {
+            //Move down the queue
+            Debug.Log("update");
+            positionInQueue -= currentEvent.attractionTemplate.attendentsPerRide;
+            setNewDestination();
+            yield return new WaitForSeconds(currentEvent.attractionTemplate.rideLength);
+        }
+    }
+
+    IEnumerator enjoyRide()
+    {
+        yield return new WaitForSeconds(currentEvent.attractionTemplate.rideLength);
+        currentEvent.attendentsInQueue.Remove(this);
+        setNewDestination();
     }
 }

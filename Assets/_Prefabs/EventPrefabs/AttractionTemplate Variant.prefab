@@ -55,9 +55,13 @@ PrefabInstance:
       propertyPath: eventTemplate
       value: 
       objectReference: {fileID: 11400000, guid: 5377b17618630f643a1473095cad8769, type: 2}
+    - target: {fileID: 1152074645407670286, guid: 98b6c770d6c45bb4faeb3c6c304a46f1, type: 3}
+      propertyPath: attractionTemplate
+      value: 
+      objectReference: {fileID: 11400000, guid: 5377b17618630f643a1473095cad8769, type: 2}
     - target: {fileID: 1152074645407670387, guid: 98b6c770d6c45bb4faeb3c6c304a46f1, type: 3}
       propertyPath: m_Name
-      value: AttractionTemplate Variant (1)
+      value: AttractionTemplate Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1152074645407670387, guid: 98b6c770d6c45bb4faeb3c6c304a46f1, type: 3}
       propertyPath: m_TagString
