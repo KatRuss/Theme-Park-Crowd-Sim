@@ -20,7 +20,7 @@ Just some little guys lining up!
 
 ![Little guys entering cubes](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZDg3OTZjMmY0ZTQ1MDBmNzQxNTQ0ODNkNzVhYzg5MmYyNDI2NzIxNCZjdD1n/VHaI60o8JwXLfWI3tI/giphy.gif)
 
-The little guys entering into an attraction (which are cubes right now) wand leaving when the ride is over.
+The little guys entering into an attraction (which are cubes right now) and leaving when the ride is over.
 
 ![Scriptable Objects](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGY1NTE0NWY4YTAwNzY5YTBjNTdmMWY3NGQ0OTQxYzc2ZWRhNzQ0OSZjdD1n/jJLS316g5Ia00qeJDy/giphy.gif) 
 
